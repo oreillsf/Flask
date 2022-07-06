@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+<head>
+    function checkBoxLimit() {
+        var checkBoxGroup = document.forms['graphicalForm2']['imgs'];			
+        var limit = 3;
+        for (var i = 0; i < checkBoxGroup.length; i++) {
+            checkBoxGroup[i].onclick = function() {
+                var checkedcount = 0;
+                for (var i = 0; i < checkBoxGroup.length; i++) {
+                    checkedcount += (checkBoxGroup[i].checked) ? 1 : 0;
+                }
+                if (checkedcount > limit) {
+                    console.log("You can select maximum of " + limit + " checkboxes.");
+                    alert("You can select maximum of " + limit + " checkboxes.");						
+                    this.checked = false;
+                }
+            }
+        }
+    }
+    </head>
+    <title>
+        {% block title %} <h1>Graphical Password Authentication</h1>{% endblock %}
+    </title>
+    {% block content %}
+    
+    <div class="message">
+        Enter your username and select the 3 images you set as a graphical password. [Attempt 2]
+        <audio controls style="padding-top: 10px;">
+                        <source src="./static/graphicalLogin2.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                        Your browser does not support the audio element.
+                    </audio>
+        <br><br>
+        
+    </div>
+
+    <form action="{{ url_for("graphicalLoginForm2") }}" method="post" name="graphicalLoginForm2">
+        
+
+        <tr>
+                <td style="padding: 50px 200px;">
+                    <div class="title"style="margin-left: 50px;"> Username:</div>
+                </td>
+                <td> <input required type="text" name="username" style="width: 200px; height:50px; margin-left:50px;font-size: larger; background: #8FAADC; border: none" placeholder="Type here...">
+                </td>
+        </tr>
+
+        <table>
+           
+
+            <tr>
+                
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="cam" style="transform: scale(2.5);">
+                        <img src="./static/cam.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="lock" style="transform: scale(2.5);">
+                        <img src="./static/lock.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="home" style="transform: scale(2.5);">
+                        <img src="./static/home.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="support" style="transform: scale(2.5);">
+                        <img src="./static/support.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="globe" style="transform: scale(2.5);">
+                        <img src="./static/globe.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="flower" style="transform: scale(2.5);">
+                        <img src="./static/flower.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                       
+            </tr>
+            
+            <tr>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="hat" style="transform: scale(2.5);">
+                        <img src="./static/hat.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="aeroplane" style="transform: scale(2.5);">
+                        <img src="./static/aeroplane.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                
+                
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="heart" style="transform: scale(2.5);">
+                        <img src="./static/heart.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="tree" style="transform: scale(2.5);">
+                        <img src="./static/tree.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+                <td style="padding: 50px 50px 50px 100px;">
+                    <label>
+                        <input type="checkbox" name="imgs" value="star" style="transform: scale(2.5);">
+                        <img src="./static/star.png" style="height: 80px;width: 80px;">
+                    </label>
+                </td>
+        
+            </tr>
+            </table>
+            <br>
+            <button type="submit" class="buttonCustom" style="padding-top: 20px;" value="submit" name="buttonForm" >Login</button>
+
+            <tr><td style="width:50%  ;padding-top: 20px;"><br><a href="{{ url_for("musicalSet") }}" >  <button type="button" class="buttonCustom" value="back">Skip to Next Page</button></a></td>
+            </form>
+            {% endblock %}

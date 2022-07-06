@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+<style>
+
+</style>
+    <title>
+        {% block title %} <h1>Pin Authentication</h1>{% endblock %}
+    </title>
+    {% block content %}
+    
+    <div class="message">
+        Enter the username and pin you selected. [Attempt 1]
+        <audio controls style="padding-top: 10px;">
+                        <source src="./static/pinLogin1.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                        Your browser does not support the audio element.
+                    </audio>
+        <br><br>
+        
+    <form action="{{ url_for("pinLoginForm1") }}" method="post" name="pinLoginForm1">
+        <table>
+            
+          <tr>
+                <td style="padding: 50px 200px;">
+                    <div class="title"> Username     :</div>
+                </td>
+                <td> <input required type="text" name="username" style="width: 200px; height:50px; font-size: larger; background: #8FAADC; border: none" placeholder="Type here...">
+                </td>
+            </tr>
+            <tr></tr><tr></tr>
+            <tr>
+                <td style="padding: 60px 200px;">
+                    <div class="title"> Pin     :</div>
+                </td>
+                
+                <td> <input type="password" name="pin" style="width: 200px; height:50px;font-size: larger; background: #8FAADC; border: none" placeholder="Type here..."
+                    required>
+                   
+                </td>
+            </tr>
+            </table>
+            <br>
+            
+            <button type="submit" class="buttonCustom" value="submit" name="buttonForm" >Login</button>
+            </form>
+            {% endblock %}

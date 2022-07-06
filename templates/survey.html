@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+
+<style>
+
+
+</style>
+<title>
+    {% block title %} <h1>Questionnaire</h1>{% endblock %}
+</title>
+{% block content %}
+
+<form action="{{ url_for("surveyQuestion") }}" method="post" name="surveyQuestion">
+<table>
+    <tr>
+        <td>
+
+            <div class="message2"style="padding-top: 100px;">1. How would you rate your experience with the alpha-numeric password authentication method we presented?
+
+                 </div>
+        </td>
+        <td> <audio controls style="padding-top: 100px;">
+                <source src="./static/sur1.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                Your browser does not support the audio element.
+            </audio></td>
+    </tr>
+    </table>
+<table>
+
+    <tr>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q1" value="vala" style="transform: scale(2.5);" required>
+                <img src="./static/excited.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q1" value="valb" style="transform: scale(2.5);" required>
+                <img src="./static/happy.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q1" value="valc" style="transform: scale(2.5);" required>
+                <img src="./static/neutral.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q1" value="vald" style="transform: scale(2.5);" required>
+                <img src="./static/unhappy.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q1" value="vale" style="transform: scale(2.5);" required>
+                <img src="./static/angry.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+
+    </tr>
+    
+</table>
+<table>
+    <tr>
+        <td style="padding: 0px 50px;">
+            <div class="message2"> Any comments</div>
+        </td>
+        <td> <input type="text" name="pinComment1"  style="width: 900px; font-size: larger;height:30px; background: #8FAADC; border: none" placeholder="Type here...">
+        </td>
+    </tr>
+</table>
+
+
+<table>
+    <tr>
+        <td>
+
+            <div class="message2"style="padding-top: 200px;">2. How would you rate your experience with the pin based authentication method we presented?
+
+                 </div>
+        </td>
+        <td> <audio controls style="padding-top: 200px;">
+                <source src="./static/sur2.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                Your browser does not support the audio element.
+            </audio></td>
+    </tr>
+    </table>
+<table>
+
+    <tr>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q2" value="vala" style="transform: scale(2.5);" required>
+                <img src="./static/excited.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q2" value="valb" style="transform: scale(2.5);" required>
+                <img src="./static/happy.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q2" value="valc" style="transform: scale(2.5);" required>
+                <img src="./static/neutral.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q2" value="vald" style="transform: scale(2.5);" required>
+                <img src="./static/unhappy.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q2" value="vale" style="transform: scale(2.5);" required>
+                <img src="./static/angry.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+
+    </tr>
+    
+</table>
+<table>
+    <tr>
+        <td style="padding: 0px 50px;">
+            <div class="message2"> Any comments</div>
+        </td>
+        <td> <input type="text" name="pinComment2"  style="width: 900px; font-size: larger;height:30px; background: #8FAADC; border: none" placeholder="Type here...">
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+
+            <div class="message2"style="padding-top: 200px;">3. How would you rate your experience with the graphical/image based authentication method we presented?
+
+                 </div>
+        </td>
+        <td> <audio controls style="padding-top: 200px;">
+                <source src="./static/sur3.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                Your browser does not support the audio element.
+            </audio></td>
+    </tr>
+    </table>
+<table>
+
+    <tr>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q3" value="vala" style="transform: scale(2.5);" required>
+                <img src="./static/excited.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q3" value="valb" style="transform: scale(2.5);" required>
+                <img src="./static/happy.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q3" value="valc" style="transform: scale(2.5);" required>
+                <img src="./static/neutral.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q3" value="vald" style="transform: scale(2.5);" required>
+                <img src="./static/unhappy.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q3" value="vale" style="transform: scale(2.5);" required>
+                <img src="./static/angry.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+
+    </tr>
+    
+</table>
+<table>
+    <tr>
+        <td style="padding: 0px 50px;">
+            <div class="message2"> Any comments</div>
+        </td>
+        <td> <input type="text" name="pinComment3"  style="width: 900px; font-size: larger;height:30px; background: #8FAADC; border: none" placeholder="Type here...">
+        </td>
+    </tr>
+</table>
+
+
+<table>
+    <tr>
+        <td>
+
+            <div class="message2"style="padding-top: 200px;">4. How would you rate your experience with the musical authentication method we presented?
+
+                 </div>
+        </td>
+        <td> <audio controls style="padding-top: 200px;">
+                <source src="./static/sur4.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                Your browser does not support the audio element.
+            </audio></td>
+    </tr>
+    </table>
+<table>
+
+    <tr>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q4" value="vala" style="transform: scale(2.5);" required>
+                <img src="./static/excited.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q4" value="valb" style="transform: scale(2.5);" required>
+                <img src="./static/happy.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q4" value="valc" style="transform: scale(2.5);" required>
+                <img src="./static/neutral.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q4" value="vald" style="transform: scale(2.5);" required>
+                <img src="./static/unhappy.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+        <td style="padding: 50px 50px 50px 100px;">
+            <label>
+                <input type="radio" name="q4" value="vale" style="transform: scale(2.5);" required>
+                <img src="./static/angry.png" style="height: 80px;width: 80px;">
+            </label>
+        </td>
+
+    </tr>
+    
+</table>
+<table>
+    <tr>
+        <td style="padding: 0px 50px;">
+            <div class="message2"> Any comments</div>
+        </td>
+        <td> <input type="text" name="pinComment4"  style="width: 900px; font-size: larger;height:30px; background: #8FAADC; border: none" placeholder="Type here...">
+        </td>
+    </tr>
+</table>
+
+
+<table>
+        
+
+    <td> <audio controls style="padding-top: 200px;margin-left: 75px;">
+                <source src="./static/sur5.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                Your browser does not support the audio element.
+            </audio></td>    
+    <tr>
+
+        <td style="padding: 0px 50px;">
+            <div class="message2"> Please leave any other comments you feel might be relevant to this study:
+            </div>
+        </td>
+        <td> <input type="text" name="pinComment5"  style="width: 900px; font-size: larger;height:80px; background: #8FAADC; border: none" placeholder="Type here...">
+        </td>
+    </tr>
+    </table>
+    <table style="margin-left: 500px;">
+        
+        <tr><td style="width:50%  ;"><br> <button type="reset" class="buttonCustom" value="reset">Reset</button></a></td>
+         <td ><br><button type="submit" class="buttonCustom" value="submit" name="buttonForm" >Submit</button></td>
+              </tr>  
+         </table>
+</form>
+
+{% endblock %}

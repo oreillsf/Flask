@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+<style>
+
+</style>
+    <title>
+        {% block title %} <h1>Informed Consent</h1>{% endblock %}
+    </title>
+    {% block content %}
+
+
+    <div>
+        <div class="title"><span>Study Title: </span></div>
+        <div class="message">
+            Towards Accessible Authentication for People with Dyslexia
+        </div>
+    </div>
+    <br />
+    <div>
+        <div class="title"><span> Purpose of the study </span></div>
+
+        <div class="message">The purpose of this study is to assess accessibility in authentication for dyslexic users
+            and
+            investigate how current authentication mechanisms can be made more accommodating in terms of
+            design for the needs of dyslexic users. In this study we will explore alternative authentication
+            mechanisms by considering a greater diversity of technologies, processes and opportunities to meet
+            the needs of those for whom conventional alphanumeric authentication is challenging. We will
+            perform rigorous people based research/comparative study to establish a secure authentication
+            method which alleviates the difficulties dyslexic users experience with traditional methods of
+            authentication</div>
+    </div>
+    <br />
+    <form action="{{ url_for("consentPageForm") }}" method="post" name="consentForm" >
+        <div>
+            <div class="title"><span> Confirmation of particular requirements as highlighted in the Plain Language
+                    Statement </span></div>
+
+            <div class="message">
+                Participation in this study is entirely voluntary. You may decline to answer any of the questions being
+                asked. You may quit anytime by exiting the website. All information captured within the questionnaire
+                will be destroyed upon completion of the practicum in November 2022.
+                <br>
+                <br>
+                <table>
+                <tr><td style="width: 60%;">     Participant – please complete the following (Select Yes or No for each question)
+               </td><td style="width: 40%;"> <audio controls>
+                    <source src="./static/ConsentConfirm.mp3" type="audio/mpeg" style="background-color: #333F50;">
+                    Your browser does not support the audio element.
+                  </audio></td></tr></table>
+                  <br>
+                </div>
+            <div class="message">
+                <table style="margin-left: 40pt;">
+                    <tr style="height: 80px;">
+                        <td class="message" style="width: 60%;"> I have read the Plain Language Statement (or had it
+                            read to me) </td>
+                           
+                        <td style="width: 15%;"> <input type="radio"  name="choice1"
+                                value="yes" style="transform: scale(2.5);" required>&nbsp;&nbsp;Yes</td>
+                        <td style="width: 5%;"><input type="radio"  name="choice1"
+                                value="no" style="transform: scale(2.5);" required>&nbsp;&nbsp;No</button></td>
+                    </tr>
+
+                    <tr style="height: 80px;">
+                        <td class="message" style="width: 60%;"> I understand the information provided </td>
+                        <td style="width: 15%;"> <input type="radio" required  name="choice2"
+                                value="yes" style="transform: scale(2.5);">&nbsp;&nbsp;Yes</button></td>
+                        <td style="width: 5%;"><input type="radio"  name="choice2"
+                                value="no" style="transform: scale(2.5);" required>&nbsp;&nbsp;No</button></td>
+                    </tr>
+
+                    <tr style="height: 80px;">
+                        <td class="message" style="width: 60%;"> I understand the information provided in relation to
+                            data protection </td>
+                        <td style="width: 15%;"> <input type="radio" name="choice3" required
+                                value="yes" style="transform: scale(2.5);">&nbsp;&nbsp;Yes</button></td>
+                        <td style="width: 5%;"><input type="radio" required name="choice3"
+                                value="no" style="transform: scale(2.5);">&nbsp;&nbsp;No</button></td>
+                    </tr>
+
+                    <tr style="height: 80px;">
+                        <td class="message" style="width: 60%;"> I have had an opportunity to ask questions and discuss
+                            this study </td>
+                        <td style="width: 15%;"> <input type="radio" name="choice4" required
+                                value="yes" style="transform: scale(2.5);">&nbsp;&nbsp;Yes</button></td>
+                        <td style="width: 5%;"><input type="radio" name="choice4"
+                                value="no" style="transform: scale(2.5);" required>&nbsp;&nbsp;No</button></td>
+                    </tr>
+
+                    <tr style="height: 80px;">
+                        <td class="message" style="width: 60%;"> I have received satisfactory answers to all my
+                            questions </td>
+                        <td style="width: 15%;"> <input type="radio"  name="choice5" required
+                                value="yes" style="transform: scale(2.5);">&nbsp;&nbsp;Yes</td>
+                        <td style="width: 5%;"><input type="radio"  name="choice5"
+                                value="no" style="transform: scale(2.5);" required>&nbsp;&nbsp;No</td>
+                    </tr>
+
+                    <tr style="height: 80px;">
+                        <td class="message" style="width: 60%;"> I am aware that I can withdraw from this study at any
+                            point </td>
+                        <td style="width: 12%;"> <input type="radio"  name="choice6" required
+                                value="yes" style="transform: scale(2.5);">&nbsp;&nbsp;Yes</button></td>
+                        <td style="width: 8%;"><input type="radio"  name="choice6"
+                                value="no" style="transform: scale(2.5);" required>&nbsp;&nbsp;No</button></td>
+                    </tr>
+
+                
+
+            </div>
+
+
+            <tr></tr>
+           <tr><td style="width:20% ;"><br><a href="{{ url_for("returnToIndex") }}" >  <button type="button" class="buttonCustom" value="back">Previous Page</button></a></td>
+            <td ><br><button type="submit" class="buttonCustom" value="submit" name="buttonForm" >Submit</button></td>
+                 </tr>  
+            </table>
+            
+    </form>
+    {% endblock %}
+ 

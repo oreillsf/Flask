@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+<div>
+    <title>
+        {% block title %} <h1>Plain Language Statement</h1>{% endblock %}        
+    </title>
+    {% block content %}
+    <form action="{{ url_for("informedConsentPage") }}">
+        
+        <div>
+            <div class="title"><span> Research Study Title: </span></div>
+            <div class="message">
+                Towards Accessible Authentication for People with Dyslexia
+            </div>
+        </div>
+        <br />
+        <div>
+            <div class="title"><span> School/Unit: </span></div>
+
+            <div class="message">Faculty of Engineering and Computing</div>
+        </div>
+        <br />
+        <div>
+            <div class="title"><span> Principal Investigator: </span></div>
+
+            <div class="message">
+                Dr. Irina Tal <br padding-bottom: .3cm; />
+                Contact Number: 01- 700 7020 <br padding-bottom: .3cm; />
+                Email: Irina.tal@dcu.ie
+            </div>
+        </div>
+        <br />
+        <div>
+            <div class="title"><span> School/Unit: </span></div>
+
+            <div class="message">Faculty of Engineering and Computing</div>
+        </div>
+        <br />
+        <div>
+            <div class="title"><span> Research Students: </span></div>
+
+            <div class="message">
+                1. Amiya Varghese -<br />
+                <li>MsC Student (Secure Software Engineering)</li>
+                <li>amiya.varghese3@mail.dcu.ie</li>
+            </div>
+            <br>
+            <div class="message">
+                2. Fachtna O’Reilly -<br />
+                <li>MsC Student (Secure Software Engineering)</li>
+                <li>fachtna.oreilly27@mail.dcu.ie</li>
+            </div>
+        </div>
+        <br />
+        <div>
+            <div class="title"><span> Privacy Notice </span></div>
+
+            <div class="message">
+                <li>
+                    As part of this research a study will be conducted in which non-personally identifiable data will be
+                    collected from a group of individuals who have dyslexia for the purposes of academic research.
+                </li><br />
+                <li>
+                    This study will present several authentication methods through online means to people with dyslexia
+                    in order to ascertain which might be preferable or more accessible to these users. We are interested
+                    in your advice and feedback in relation to the methodology we are going to follow in this study. We
+                    want to make sure this is adequate for people with dyslexia, therefore, we are going to organize
+                    co-creation sessions to build the methodology and the website for this study.
+                </li><br />
+                <li>
+                    This study will form part of a research project being conducted by the research students outlined
+                    above under the supervision of Dr. Irina Tal and will explore accessible authentication for users
+                    with dyslexia.
+                </li><br />
+                <li>
+                    The data controller for this project is DCU.
+                </li><br />
+                <li>
+                    The DCU Data Protection Officer is Mr. Martin Ward (data.protection@dcu.ie Ph.: 7005118
+                    / 7008257).
+                </li><br />
+                <li>
+                    The non-personally identifiable data collected as part of this study will be stored securely on
+                    a DCU google drive in compliance with DCU’s data retention policy and will only be
+                    accessible strictly by the research students and principal investigator outlined above.
+                </li><br />
+                <li>
+                    The data will be retained until November 2022 after which it will be fully erased in line with
+                    DCU’s data retention policy.
+                </li><br />
+                <li>
+                    Participants are free to contact any of the people involved in the research to seek further
+                    clarification and information.
+                </li><br />
+                <li>
+                    Participants in this study should be aware that they have the right to lodge a complaint with
+                    the <a href="https://www.dataprotection.ie/" title="Data Protection Commission"></a>
+                </li><br />
+                <li>
+                    Participants should be aware that confidentiality of information can only be protected within
+                    the limitations of the law - i.e., it is possible for data to be subject to subpoena, freedom of
+                    information claim or mandated reporting by some professions.
+                </li><br />
+                <li>
+                    Participants should be aware that they can withdraw from this study at any point, in which
+                    case no future data collection will take place. Any data collected up to the point at which
+                    consent is withdrawn will be erased if requested.
+                </li><br />
+            </div>
+        </div>
+        <br>
+        <div>
+            <div class="title"><span> Data Collected: </span></div>
+
+            <div class="message">
+
+                <li>There will be some demographic data collected on a voluntary basis (there will be an option
+                    to not answer in each category).</li></br>
+                <li>Data will be collected on the usability/preferability of the authentication methods presented
+                    and metrics will be stored such as the time taken for each authentication method by each
+                    participant. </li>
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="title" style="font-size: 16pt;">If participants have concerns about this study and wish to contact
+            an independent person,
+            please contact:<br></br>
+            The Secretary, Dublin City University Research Ethics Committee, c/o Research and Innovation Support,
+            Dublin City University, Dublin 9. Tel 01-7008000, e-mail rec@dcu.ie
+        </div>
+        <br>
+        <br>
+        <div>
+            <button type="submit" class="buttonCustom">Next Page</button>
+        </div>
+    </form>
+    {% endblock %}

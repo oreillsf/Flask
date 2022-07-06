@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        body{
+            background-color:#FFFDD0 ;
+           
+        }
+        .buttonCustom{
+            margin:auto;
+            display:block;
+            padding:16px 32px;
+            font-size:22px;
+            font-weight:100;
+            background-color: #333F50;
+            color: #FF9900;
+            border:0;
+            font-weight:100;
+            font-weight: bold;
+          }
+          
+              
+        .heading{
+            color: #1F4E79;
+            font-size: 18pt;
+            margin-left: 30pt;
+            text-decoration: none;
+        }
+        a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+        .circle {
+            background: #333F50;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 60px;
+            vertical-align: middle;
+            
+            text-align: center;
+            color: #FF9900;  
+        padding: 10px 10px 10px 10px;       }
+        .message {
+            font-size: 18pt;
+            margin-left: 40pt;
+            color: #1F4E79;
+        }
+       
+        .message2 {
+            font-size: 18pt;
+            margin-left: 40pt;
+            color: #1F4E79;
+            padding-bottom: 12px;
+        }
+        .title {
+            font-size: 18pt;
+            margin-left: 30pt;
+            color: #1F4E79;
+            font-weight: bold;
+            padding-bottom: .3cm;
+        }
+        nav h1 {
+            color: #1F4E79;
+            font-size: 40pt;
+            text-align: center;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        {% block title %} {% endblock %}     
+    </nav>
+    <hr>
+     <div class="content">
+        {% block content %} {% endblock %}
+    </div> 
+</body>
+</html>
