@@ -1,8 +1,7 @@
 
 
 from flask import Flask, render_template, redirect, request
-# from application import app
-# from application.models import Data
+
 import db_create as db 
 
 
