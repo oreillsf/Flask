@@ -2,7 +2,7 @@
 # The other elements are the same as used in the tutorial
 # format: (user):(password)@(db_identifier).amazonaws.com:3306/(db_name)flaskdemo.cwsaehb7ywmi.us-east-1.rds.amazonaws.com:3306/flaskdemo'
 
-SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://admin:Vargheseoreilly123@database2.cwffazstjbiz.eu-west-1.rds.amazonaws.com:3306/practicum'
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://xxxxx:xxxxx@database2.xxxxxxxx.eu-west-1.rds.amazonaws.com:3306/practicum'
 
 # Uncomment the line below if you want to work with a local DB
 #SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
